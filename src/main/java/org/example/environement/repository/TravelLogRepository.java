@@ -18,6 +18,4 @@ public interface TravelLogRepository extends JpaRepository<TravelLog, Long> {
     List<TravelLog> findByObserverNameAndDateBetween(@Param("user") String user,
                                                      @Param("startDate") LocalDate startDate,
                                                      @Param("endDate") LocalDate endDate);
-
-    List<TravelLog> findTravellogByUserForLastMonth(String user, LocalDate date);
 }
